@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Quiz"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imagepart"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/heart" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Heart Quiz"
+        android:id="@+id/titlePart"
+        android:layout_toRightOf="@id/imagepart"
+        android:textSize="28dp"
+        android:textColor="#76C5B0"
+        android:layout_marginTop="50dp"/>
+    <LinearLayout
+        android:id="@+id/layoutQuiz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imagepart"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/Quest1"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="How old are you?"
+            android:textColor="@color/black"
+            android:layout_marginStart="20dp"/>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio1">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_marginStart="20dp"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="40-59"
+                android:layout_marginStart="20dp"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="60 or older"
+                android:layout_marginStart="20dp"/>
+        </RadioGroup>
+        <TextView
+            android:id="@+id/Quest2"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Do you smoke or have a history of smoking?"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:layout_marginStart="20dp"/>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio2">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No, I have never smoked"
+                android:layout_marginStart="20dp"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes, I used to smoke, but I quit"
+                android:layout_marginStart="20dp"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes, I currently smoke"
+                android:layout_marginStart="20dp"/>
+        </RadioGroup>
+        <TextView
+            android:id="@+id/Quest3"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Do you have high blood pressure (hypertension)?"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:layout_marginStart="20dp"/>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio3">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No, my blood pressure is normal"
+                android:layout_marginStart="20dp"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Yes, but it's controlled"
+                android:layout_marginStart="20dp"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes and not well-controlled."
+                android:layout_marginStart="20dp"/>
+        </RadioGroup>
+        <TextView
+            android:id="@+id/Quest4"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What is your level of physical activity?"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:layout_marginStart="20dp"/>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio4">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I'm physically active most days of the week"
+                android:layout_marginStart="20dp"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I'm somewhat active but could do more"
+                android:layout_marginStart="20dp"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I'm mostly sedentary and rarely exercise"
+                android:layout_marginStart="20dp"/>
+        </RadioGroup>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/submitbutton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutQuiz"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_dialog"
+        android:text="submit"
+        android:textAllCaps="false"
+        android:letterSpacing="0.1"/>
+</RelativeLayout>
+</ScrollView>

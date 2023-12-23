@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/item_chat_message.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+
+    <TextView
+        android:id="@+id/textViewMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hello where have you "
+        android:textColor="@color/white"
+        android:padding="8dp"
+        android:background="@drawable/bubble_incoming"
+        android:layout_margin="20dp"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toRightOf="@id/textViewMessage"
+    android:text="8:10 am"
+    android:layout_marginTop="30dp"/>
+</RelativeLayout>

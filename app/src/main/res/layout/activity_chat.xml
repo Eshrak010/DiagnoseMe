@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Chat"
+    android:background="#008085">
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/arrownoline"
+        android:layout_marginTop="30dp"
+        android:id="@+id/arrownoline"/>
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:src="@drawable/mahrous"
+        android:layout_toRightOf="@id/arrownoline"
+        app:shapeAppearanceOverlay="@style/circularImageShape"
+        android:id="@+id/deocpic"
+        android:layout_marginTop="15dp"
+        />
+    <TextView
+        android:id="@+id/docname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dr.Mahrous"
+        android:textColor="@color/white"
+        android:layout_marginTop="40dp"
+        android:layout_toRightOf="@id/deocpic"
+        android:layout_marginStart="10dp"
+        android:textSize="17dp"/>
+<ImageView
+    android:id="@+id/tel"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:src="@drawable/tel"
+    android:layout_marginTop="30dp"
+    android:layout_toRightOf="@+id/docname"
+    android:layout_marginStart="40dp"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/camera"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@+id/tel"
+        android:layout_marginStart="40dp"/>
+    <RelativeLayout
+        android:layout_below="@id/deocpic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/corner4">
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@id/imagetalkingedittext"
+    android:id="@+id/talking"
+    android:orientation="vertical">
+<androidx.recyclerview.widget.RecyclerView
+    android:layout_marginTop="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/recyclerChat"
+    android:orientation="vertical"
+    />
+    </LinearLayout>
+        <RelativeLayout
+            android:layout_width="400dp"
+            android:layout_height="70dp"
+            android:id="@+id/imagetalkingedittext"
+            android:layout_alignParentBottom="true"
+            >
+
+            <EditText
+                android:id="@+id/talkingtext"
+                android:layout_width="400dp"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/corner2"
+                android:hint="Type a message here"
+                android:paddingStart="10dp"/>
+            <ImageButton
+                android:id="@+id/imageButtoncamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="60dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Toggle Password Visibility"
+                android:src="@drawable/cam2"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/talkingtext" />
+            <ImageButton
+                android:id="@+id/imageButtonsend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Toggle Password Visibility"
+                android:src="@drawable/send"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/talkingtext" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

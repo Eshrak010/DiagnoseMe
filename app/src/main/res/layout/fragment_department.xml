@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".department">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Department"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:layout_marginStart="20dp"
+        android:id="@+id/departmentText"
+        android:layout_marginBottom="20dp"/>
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30dp"
+        android:rowCount="3"
+        android:columnCount="2"
+        android:id="@+id/grid_department"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/departmentText"
+        android:background="@drawable/fragment_design">
+
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/cornerraduisthin"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:id="@+id/lineartHeart"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            >
+            <ImageView
+                android:id="@+id/heartpic"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/heart"
+                android:adjustViewBounds="true"
+                />
+
+            <TextView
+                android:id="@+id/hearttext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Heart"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/cornerraduisthin"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:id="@+id/linearLungs"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            >
+            <ImageView
+                android:id="@+id/Lungspic"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/lungs"
+                android:adjustViewBounds="true"
+                />
+
+            <TextView
+                android:id="@+id/lungstext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lungs"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/cornerraduisthin"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:id="@+id/lineartBrain"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            >
+            <ImageView
+                android:id="@+id/brainpic"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/brain"
+                android:adjustViewBounds="true"
+                />
+
+            <TextView
+                android:id="@+id/braintext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Brain"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/cornerraduisthin"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:id="@+id/lineartkidney"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            >
+            <ImageView
+                android:id="@+id/kidneypic"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/kidney"
+                android:adjustViewBounds="true"
+                />
+
+            <TextView
+                android:id="@+id/kidneytext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kidney"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/cornerraduisthin"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:id="@+id/lineartLiver"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            >
+            <ImageView
+                android:id="@+id/liverpic"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/liver"
+                android:adjustViewBounds="true"
+                />
+
+            <TextView
+                android:id="@+id/livertext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Liver"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/cornerraduisthin"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:id="@+id/linearStomach"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            >
+            <ImageView
+                android:id="@+id/stomachpic"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/stomach"
+                android:adjustViewBounds="true"
+                />
+
+            <TextView
+                android:id="@+id/stomachtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stomach"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+    </GridLayout>
+
+    </RelativeLayout>
+</ScrollView>
+</FrameLayout>

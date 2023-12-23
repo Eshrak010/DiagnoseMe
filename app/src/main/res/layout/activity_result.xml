@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Result">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<TextView
+    android:layout_marginTop="20dp"
+    android:id="@+id/textResult"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:text="You have 3 days left \nyou lungs are dead inside"
+    android:textColor="@color/black"
+    android:textSize="20dp"/>
+
+    <!-- res/layout/circular_progress_image.xml -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textResult"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:id="@+id/progress">
+
+        <!-- Circular ProgressBar -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:indeterminateOnly="false"
+            android:progressDrawable="@drawable/circle"
+            android:progress="60"
+            android:max="12"
+            android:rotation="-90"/>
+
+        <!-- Image View -->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/lungsresults" />
+
+    </RelativeLayout>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="You still can get a more detailed result "
+    android:textColor="@color/black"
+    android:layout_below="@id/progress"
+    android:layout_marginTop="50dp"
+    android:textStyle="bold"
+    android:textSize="15dp"
+    android:id="@+id/textdetail"
+    android:layout_marginStart="10dp"/>
+
+<RelativeLayout
+    android:layout_width="350dp"
+    android:layout_height="180dp"
+    android:id="@+id/mail"
+    android:layout_below="@id/textdetail"
+    android:background="@drawable/corner3"
+    android:layout_centerHorizontal="true"
+    android:max="100"
+    android:progress="0"
+    >
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ordonnance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ordonnance"
+        app:shapeAppearanceOverlay="@style/circularImageShape3"
+        android:adjustViewBounds="true"
+        />
+    <TextView
+        android:id="@+id/textOrdonnance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="get your \n prescription \n as a pdf"
+        android:layout_toRightOf="@id/ordonnance"
+        android:textColor="@color/black"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"/>
+
+
+</RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You still can send your test to a doctor "
+        android:textColor="@color/black"
+        android:layout_below="@id/mail"
+        android:layout_marginTop="50dp"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:id="@+id/textsend"
+        android:layout_marginStart="10dp"/>
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="180dp"
+        android:id="@+id/sendmsg"
+        android:layout_below="@id/textsend"
+        android:background="@drawable/corner3"
+        android:layout_centerHorizontal="true"
+        >
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/docmeet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/docmeet"
+            app:shapeAppearanceOverlay="@style/circularImageShape3"
+            android:adjustViewBounds="true"
+            />
+        <TextView
+            android:id="@+id/textmeet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Talk to a specialist"
+            android:layout_toRightOf="@id/docmeet"
+            android:textColor="@color/black"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"/>
+
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>

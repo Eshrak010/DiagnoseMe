@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginBottom="20dp"
+    android:background="@drawable/cornerraduisthin">
+
+
+
+        <!-- Rounded Image -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/doctorImage"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/asma"
+            app:shapeAppearanceOverlay="@style/circularImageShape"
+            />
+
+        <!-- Text -->
+        <TextView
+            android:id="@+id/doctorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/doctorImage"
+            android:text="Dr Asma"
+            android:layout_toRightOf="@id/doctorImage"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="pulmonologist"
+            android:layout_below="@id/doctorName"
+            android:layout_toRightOf="@id/doctorImage"
+            android:textColor="@color/black"
+            android:id="@+id/DoctorJob"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Experience"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/doctorImage"
+            android:layout_below="@id/DoctorJob"
+            android:textColor="@color/black"
+            android:id="@+id/textExp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/doctorImage"
+            android:layout_below="@id/textExp"
+            android:id="@+id/experience"
+            android:text="4 years"
+            android:textColor="@color/black"/>
+
+
+        <!-- RatingBar -->
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/doctorImage"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="4dp"
+            android:numStars="5"
+            android:progressTint="#ffc600"
+            android:rating="4.5"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:stepSize="0.1"
+            android:isIndicator="true"
+            />
+
+    </RelativeLayout>

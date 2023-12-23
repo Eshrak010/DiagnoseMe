@@ -1,0 +1,26 @@
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.DiagnoseMe" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+    </style>
+
+
+    <style name="circularImageShape" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="circularImageShape2" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">45%</item>
+    </style>
+
+    <style name="circularImageShape3" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20%</item>
+    </style>
+
+
+    <style name="Theme.DiagnoseMe" parent="Base.Theme.DiagnoseMe" />
+</resources>

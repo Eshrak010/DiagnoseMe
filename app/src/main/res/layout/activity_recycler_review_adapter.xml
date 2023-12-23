@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="250dp"
+    android:layout_height="150dp"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginBottom="20dp"
+    android:background="@drawable/cornerraduisthin"
+    tools:context=".ReviewAdapter">
+
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/PersonImage"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/nefaa"
+            app:shapeAppearanceOverlay="@style/circularImageShape" />
+        <!-- Text -->
+        <TextView
+            android:id="@+id/Personname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/PersonImage"
+            android:text="Nefaa battikh"
+            android:layout_toRightOf="@id/PersonImage"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <RatingBar
+            android:isIndicator="true"
+            android:id="@+id/ratingBar"
+            android:layout_toRightOf="@id/PersonImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Personname"
+            android:layout_marginStart="20dp"
+            android:layout_alignParentStart="true"
+            android:numStars="5"
+            android:progressTint="#ffc600"
+            android:rating="4.5"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:stepSize="0.1"
+            />
+        <TextView
+            android:id="@+id/comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="the best lungs doctor ever thank you Dr. Asma"
+            android:layout_below="@id/ratingBar"
+            android:textColor="@color/black"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:maxLines="4"
+            android:ellipsize="end"/>
+
+
+
+
+</RelativeLayout>

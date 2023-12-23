@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DoctorProfile">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow"
+        android:id="@+id/arrow"
+        android:adjustViewBounds="true"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profile"
+        android:textColor="#008085"
+        android:textSize="23dp"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"/>
+
+
+    <RelativeLayout
+        android:id="@+id/DoctorInformation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/arrow"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/cornerraduisthin">
+
+        <!-- Rounded Image -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/doctorImage"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/asma"
+            app:shapeAppearanceOverlay="@style/circularImageShape" />
+        <!-- Text -->
+        <TextView
+            android:id="@+id/doctorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/doctorImage"
+            android:text="Dr Asma"
+            android:layout_toRightOf="@id/doctorImage"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="pulmonologist"
+            android:layout_below="@id/doctorName"
+            android:layout_toRightOf="@id/doctorImage"
+            android:textColor="@color/black"
+            android:id="@+id/DoctorJob"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Experience"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/doctorImage"
+            android:layout_below="@id/DoctorJob"
+            android:textColor="@color/black"
+            android:id="@+id/textExp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/doctorImage"
+            android:layout_below="@id/textExp"
+            android:id="@+id/experience"
+            android:text="4 years"
+            android:textColor="@color/black"/>
+
+
+        <!-- RatingBar -->
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/doctorImage"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="4dp"
+            android:numStars="5"
+            android:progressTint="#ffc600"
+            android:rating="4.5"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:stepSize="0.1"
+            android:isIndicator="true"
+            />
+
+    </RelativeLayout>
+        <TextView
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reviews"
+            android:id="@+id/textReviews"
+            android:layout_below="@id/DoctorInformation"
+            android:textColor="#008085"
+            android:textSize="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="12dp"
+            />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ReviewScroll"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/textReviews"
+        android:layout_marginTop="20dp"
+        android:background="#42008085"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Schedule"
+        android:layout_below="@id/ReviewScroll"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        android:textColor="#008085"
+        android:id="@+id/reviewtext"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:textSize="20dp"/>
+<HorizontalScrollView
+    android:layout_below="@id/reviewtext"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/scrollHori"
+    android:scrollbars="none">
+    <LinearLayout
+        android:id="@+id/scheduleScroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_below="@id/reviewtext"
+        >
+
+
+
+            <LinearLayout
+
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/selector_background"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:id="@+id/LinearMon"
+                >
+            <TextView
+                android:id="@+id/Mon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mon"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/MonDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20"
+                android:textColor="@drawable/selector_text_color"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/selector_background"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:id="@+id/LinearTue"
+            android:layout_marginLeft="20dp"
+            >
+            <TextView
+                android:id="@+id/Tue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tue"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/TuesDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="21"
+                android:textColor="@drawable/selector_text_color"
+                android:textSize="25sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/selector_background"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:id="@+id/LinearWed"
+            android:layout_marginLeft="20dp"
+
+            >
+            <TextView
+                android:id="@+id/Wed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wed"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/Wednesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="22"
+                android:textColor="@drawable/selector_text_color"
+                android:textSize="25sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/selector_background"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:id="@+id/LinearThu"
+            android:layout_marginLeft="20dp"
+            >
+            <TextView
+                android:id="@+id/Thu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thu"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/ThursDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="23"
+                android:textColor="@drawable/selector_text_color"
+                android:textSize="25sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/selector_background"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:id="@+id/LinearFri"
+            android:layout_marginLeft="20dp"
+            >
+            <TextView
+                android:id="@+id/Fri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fri"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/FriDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24"
+                android:textColor="@drawable/selector_text_color"
+                android:textSize="25sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/selector_background"
+            android:id="@+id/LinearSat"
+            android:layout_marginLeft="20dp"
+            >
+            <TextView
+                android:id="@+id/Sat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sat"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/saturDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25"
+                android:textColor="@drawable/selector_text_color"
+                android:textSize="25sp" />
+        </LinearLayout>
+    </LinearLayout>
+</HorizontalScrollView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="List of schedule"
+        android:layout_below="@id/scrollHori"
+        android:id="@+id/textSchedule"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        android:textColor="#008085"
+        android:textSize="20dp"
+        android:layout_marginBottom="40dp"/>
+    <GridLayout
+        android:id="@+id/gridtime"
+        android:layout_below="@id/textSchedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rowCount="2"
+        android:columnCount="3"
+        >
+        <TextView
+            android:id="@+id/am8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="8:00 am"
+            android:textSize="18dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/cornertime"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/am9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="9:00 am"
+            android:textSize="18dp"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/selector_schedule_item"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/am10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="10:00 am"
+            android:textSize="18dp"
+            android:background="@drawable/selector_schedule_item"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/am11"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="11:00 am"
+            android:textSize="18dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/selector_schedule_item"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/am12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="12:00 am"
+            android:textSize="18dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/selector_schedule_item"
+            android:padding="10dp"
+            />
+
+        <TextView
+            android:id="@+id/am13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="13:00 am"
+            android:textSize="18dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/selector_schedule_item"
+            android:padding="10dp"
+            />
+
+    </GridLayout>
+
+<Button
+    android:id="@+id/requestShedule"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/buttoncolorblue"
+    android:layout_below="@id/gridtime"
+    android:text="Request schedule"
+    android:textAllCaps="false"
+    android:textColor="@color/white"
+    android:letterSpacing="0.1"
+    android:padding="10dp"
+    android:layout_marginTop="20dp"
+    android:layout_centerHorizontal="true"/>
+
+
+
+</RelativeLayout>
+</ScrollView>

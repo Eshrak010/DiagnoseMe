@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+<com.google.android.material.imageview.ShapeableImageView
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:id="@+id/profilepicturehome"
+    android:src="@drawable/slim"
+    android:adjustViewBounds="true"
+    android:scaleType="centerCrop"
+    app:shapeAppearanceOverlay="@style/circularImageShape"
+    android:layout_alignParentEnd="true"
+    android:layout_marginEnd="10dp"
+    android:layout_marginTop="10dp"
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome back"
+        android:textColor="#76C5B0"
+        android:textSize="30dp"
+        android:layout_below="@id/profilepicturehome"
+        android:layout_marginStart="40dp"
+        android:id="@+id/welcome"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Patient"
+        android:layout_below="@id/welcome"
+        android:layout_marginStart="40dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:id="@+id/usernameHome"/>
+    <RelativeLayout
+        android:id="@+id/doctorsearchorspecialist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernameHome"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:padding="5dp"
+        android:background="@drawable/cornertime"
+        android:paddingBottom="10dp">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Find your Department or Specialist"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:id="@+id/textchoose"/>
+
+        <androidx.appcompat.widget.SearchView
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/textchoose"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/search"
+            android:id="@+id/search"
+            app:queryHint="search..."
+            app:iconifiedByDefault="false" />
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/doctorsmall"
+            android:adjustViewBounds="true"
+            android:layout_toEndOf="@id/search"
+            android:layout_below="@id/textchoose"
+            android:layout_marginStart="10dp"/>
+
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/doctorsearchorspecialist"
+        android:layout_marginTop="15dp"
+        android:id="@+id/changeableFragment"
+        android:layout_above="@id/bottomNavView"/>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        app:itemIconTint="@drawable/nav_bar_selected"
+        app:itemTextColor="@drawable/nav_bar_selected"
+        app:menu="@menu/bottom_nav_menu"
+        />
+</RelativeLayout>
